@@ -19,18 +19,18 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"quintenliao.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"quintenliao.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="底部  1. 最大公约数和最小公倍数   1.1输入格式  1.2换行 输入在一行中给出两个正整数M和N（≤1000）。   1.2输出格式在一行中顺序输出M和N的最大公约数和最小公倍数，两数字间以1空格分隔123456输入样例:511 292输出样例:73 2044 1.3程序123456789101112131415161718192021222324252627282930313233343">
+  <meta name="description" content="底部  1. 最大公约数和最小公倍数   1.1输入格式  1.2换行 输入在一行中给出两个正整数M和N（≤1000）。   1.2输出格式在一行中顺序输出M和N的最大公约数和最小公倍数，两数字间以1空格分隔">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C语言">
 <meta property="og:url" content="http://quintenliao.github.io/2020/04/10/C/index.html">
 <meta property="og:site_name" content="QuintenLiao">
-<meta property="og:description" content="底部  1. 最大公约数和最小公倍数   1.1输入格式  1.2换行 输入在一行中给出两个正整数M和N（≤1000）。   1.2输出格式在一行中顺序输出M和N的最大公约数和最小公倍数，两数字间以1空格分隔123456输入样例:511 292输出样例:73 2044 1.3程序123456789101112131415161718192021222324252627282930313233343">
+<meta property="og:description" content="底部  1. 最大公约数和最小公倍数   1.1输入格式  1.2换行 输入在一行中给出两个正整数M和N（≤1000）。   1.2输出格式在一行中顺序输出M和N的最大公约数和最小公倍数，两数字间以1空格分隔">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-04-10T14:26:32.998Z">
-<meta property="article:modified_time" content="2020-04-10T15:44:43.590Z">
+<meta property="article:modified_time" content="2020-04-11T08:08:30.785Z">
 <meta property="article:author" content="Quinten Liao">
 <meta property="article:tag" content="C语言">
 <meta property="article:tag" content="标签2">
@@ -89,6 +89,7 @@
   </style>
 </noscript>
 
+<link rel="alternate" href="/atom.xml" title="QuintenLiao" type="application/atom+xml">
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -151,6 +152,11 @@
     <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
 
   </li>
+        <li class="menu-item menu-item-sitemap">
+
+    <a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>Sitemap</a>
+
+  </li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
         </a>
@@ -188,10 +194,7 @@
     </header>
 
     
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
+  <div class="reading-progress-bar"></div>
 
 
     <main class="main">
@@ -228,10 +231,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2020-04-10 22:26:32 / Modified: 23:44:43" itemprop="dateCreated datePublished" datetime="2020-04-10T22:26:32+08:00">2020-04-10</time>
+              <time title="Created: 2020-04-10 22:26:32" itemprop="dateCreated datePublished" datetime="2020-04-10T22:26:32+08:00">2020-04-10</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-04-11 16:08:30" itemprop="dateModified" datetime="2020-04-11T16:08:30+08:00">2020-04-11</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -289,7 +298,11 @@
 输入在一行中给出两个正整数M和N（≤1000）。
 
 <ul>
-<li><a href="#1.2">1.2输出格式</a><br>在一行中顺序输出M和N的最大公约数和最小公倍数，两数字间以1空格分隔<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">输入样例:</span><br><span class="line"></span><br><span class="line">511 292</span><br><span class="line"></span><br><span class="line">输出样例:</span><br><span class="line">73 2044</span><br></pre></td></tr></table></figure></li>
+<li><a href="#1.2">1.2输出格式</a><br>在一行中顺序输出M和N的最大公约数和最小公倍数，两数字间以1空格分隔</li>
+</ul>
+<a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">输入样例:</span><br><span class="line"></span><br><span class="line">511 292</span><br><span class="line"></span><br><span class="line">输出样例:</span><br><span class="line">73 2044</span><br></pre></td></tr></table></figure>
+<ul>
 <li><a href="#1.4">1.3程序</a><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> M, N;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d %d"</span>, &amp;M, &amp;N);</span><br><span class="line">    <span class="keyword">int</span> a = M, b = N;</span><br><span class="line">    <span class="keyword">while</span> (  M != N )</span><br><span class="line">    &#123;    	</span><br><span class="line">        <span class="keyword">if</span> (M &lt; N)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">int</span> x;</span><br><span class="line">            x = M;</span><br><span class="line">            M = N;</span><br><span class="line">            N = x;</span><br><span class="line">        &#125;    </span><br><span class="line">        M = M % N;</span><br><span class="line">        <span class="keyword">if</span> (M == <span class="number">0</span>)<span class="comment">//注意: 求余的分母不能为0</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"%d %d"</span>, N, a * b / N);</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d %d"</span>, M, a * b / M);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//辗转相除法</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> M, N;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d %d"</span>, &amp;M, &amp;N);</span><br><span class="line">    <span class="keyword">int</span> a = M, b = N, t = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> ( t )</span><br><span class="line">    &#123;    	</span><br><span class="line">        t = M % N;<span class="comment">//大的mod小的</span></span><br><span class="line">        M = N;    <span class="comment">//不需要判定M，N的大小，会自动</span></span><br><span class="line">        N = t;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d %d"</span>, M, a * b / M);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
@@ -349,6 +362,7 @@
 
           </div>
           
+    <div class="comments" id="gitalk-container"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -443,6 +457,10 @@
 
 
       </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
 
     </div>
   </aside>
@@ -505,6 +523,9 @@
 setInterval("createtime()",250);
 </script>
 </div>
+
+
+
         
 <div class="busuanzi-count">
   <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
@@ -579,6 +600,26 @@ setInterval("createtime()",250);
   
 
   
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : '613f302095d5ced3168f',
+      clientSecret: '83aeb7763f21b69746fba980bbdb576e79262707',
+      repo        : 'gitalk-comment',
+      owner       : 'quintenliao',
+      admin       : ['quintenliao'],
+      id          : '34967ad6eaf623d3944c43a5a0d69e43',
+        language: '',
+      distractionFreeMode: false
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
 <!--jquery-->
 <script type="text/javascript" src="/js/jquery"></script>
 
