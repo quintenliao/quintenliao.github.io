@@ -5,9 +5,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://quintenliao.github.io/"/>
+  <link href="https://quinten.top/"/>
   <updated>2020-04-11T08:08:30.785Z</updated>
-  <id>http://quintenliao.github.io/</id>
+  <id>https://quinten.top/</id>
   
   <author>
     <name>Quinten Liao</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>C语言</title>
-    <link href="http://quintenliao.github.io/2020/04/10/C/"/>
-    <id>http://quintenliao.github.io/2020/04/10/C/</id>
+    <link href="https://quinten.top/2020/04/10/C/"/>
+    <id>https://quinten.top/2020/04/10/C/</id>
     <published>2020-04-10T14:26:32.998Z</published>
     <updated>2020-04-11T08:08:30.785Z</updated>
     
@@ -44,21 +44,21 @@
     </summary>
     
     
-      <category term="C语言" scheme="http://quintenliao.github.io/categories/C%E8%AF%AD%E8%A8%80/"/>
+      <category term="C语言" scheme="https://quinten.top/categories/C%E8%AF%AD%E8%A8%80/"/>
     
-      <category term="test" scheme="http://quintenliao.github.io/categories/C%E8%AF%AD%E8%A8%80/test/"/>
+      <category term="test" scheme="https://quinten.top/categories/C%E8%AF%AD%E8%A8%80/test/"/>
     
     
-      <category term="C语言" scheme="http://quintenliao.github.io/tags/C%E8%AF%AD%E8%A8%80/"/>
+      <category term="C语言" scheme="https://quinten.top/tags/C%E8%AF%AD%E8%A8%80/"/>
     
-      <category term="标签2" scheme="http://quintenliao.github.io/tags/%E6%A0%87%E7%AD%BE2/"/>
+      <category term="标签2" scheme="https://quinten.top/tags/%E6%A0%87%E7%AD%BE2/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="http://quintenliao.github.io/2020/04/10/hello-world/"/>
-    <id>http://quintenliao.github.io/2020/04/10/hello-world/</id>
+    <link href="https://quinten.top/2020/04/10/hello-world/"/>
+    <id>https://quinten.top/2020/04/10/hello-world/</id>
     <published>2020-04-10T07:02:34.566Z</published>
     <updated>2020-04-10T07:02:34.567Z</updated>
     
