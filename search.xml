@@ -56,7 +56,7 @@
   </entry>
   <entry>
     <title>搭建 GitHub Pages 博客的经历</title>
-    <url>/2020/04/12/%E6%90%AD%E5%BB%BAGitHub-Pages-%E5%8D%9A%E5%AE%A2%E7%9A%84%E7%BB%8F%E5%8E%86/</url>
+    <url>/2020/04/12/1/</url>
     <content><![CDATA[<p>　　　　　　</p>
 <p>　　本人纯属小白，计算机一窍不通（如有错误，欢迎指正）。最初的渊源要从Markdown说起。知乎上看到了markdown标记语言，想尝试用markdown来做笔记，搜到了Siriusq 的博客<a href="https://siriusq.top/Markdown%E5%86%99%E4%BD%9C%E8%AF%AD%E6%B3%95.html#more" target="_blank" rel="noopener">Markdown写作语法</a>。然后就开始浏览Siriusq的个人博客。对此十分惊艳，也想折腾一番（消磨时间）。此番曲折，一言难尽。</p>
 <a id="more"></a>
@@ -87,8 +87,8 @@
       </tags>
   </entry>
   <entry>
-    <title>C</title>
-    <url>/2020/04/13/%E6%9C%80%E5%A4%A7%E5%85%AC%E7%BA%A6%E6%95%B0%E5%92%8C%E6%9C%80%E5%B0%8F%E5%85%AC%E5%80%8D%E6%95%B0/</url>
+    <title>最大公约数和最小公倍数</title>
+    <url>/2020/04/13/2/</url>
     <content><![CDATA[<p><font color=red>说明</font>：本文为测试文章，<del>瞎写的</del></p>
 <h4 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h4><p>本题要求两个给定正整数的最大公约数和最小公倍数。</p>
 <h4 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h4><p>输入在一行中给出两个正整数M和N（≤1000）。</p>
