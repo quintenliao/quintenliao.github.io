@@ -54,18 +54,18 @@
   <meta name="description" content="说明：本文为测试文章，瞎写的 最大公约数和最小公倍数输入格式输入在一行中给出两个正整数M和N（≤1000）。 输出格式在一行中顺序输出M和N的最大公约数和最小公倍数，两数字间以1空格分隔">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C语言">
-<meta property="og:url" content="https://quinten.top/2020/04/13/C/index.html">
+<meta property="og:url" content="https://quinten.top/undefined/%203183.html">
 <meta property="og:site_name" content="QuintenLiao">
 <meta property="og:description" content="说明：本文为测试文章，瞎写的 最大公约数和最小公倍数输入格式输入在一行中给出两个正整数M和N（≤1000）。 输出格式在一行中顺序输出M和N的最大公约数和最小公倍数，两数字间以1空格分隔">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-04-13T03:53:20.499Z">
-<meta property="article:modified_time" content="2020-04-13T03:56:06.444Z">
+<meta property="article:published_time" content="2020-04-10T14:26:32.998Z">
+<meta property="article:modified_time" content="2020-04-13T05:29:22.538Z">
 <meta property="article:author" content="Quinten Liao">
 <meta property="article:tag" content="C语言基础">
 <meta property="article:tag" content="标签2">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://quinten.top/2020/04/13/C/">
+<link rel="canonical" href="https://quinten.top/undefined/%203183.html">
 
 
 <script id="page-configurations">
@@ -238,7 +238,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://quinten.top/2020/04/13/C/">
+    <link itemprop="mainEntityOfPage" href="https://quinten.top/undefined/%203183.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -261,7 +261,7 @@
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2020-04-13 03:53:20" itemprop="dateCreated datePublished" datetime="2020-04-13T03:53:20Z">2020-04-13</time>
+              <time title="Created: 2020-04-10 14:26:32" itemprop="dateCreated datePublished" datetime="2020-04-10T14:26:32Z">2020-04-10</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -326,8 +326,7 @@
 <h3 id="求数N的位数及其各位数字之和。"><a href="#求数N的位数及其各位数字之和。" class="headerlink" title="求数N的位数及其各位数字之和。"></a>求数N的位数及其各位数字之和。</h3><h4 id="输入格式：-1"><a href="#输入格式：-1" class="headerlink" title="输入格式："></a>输入格式：</h4><p>输入在一行中给出一个不超过10^9的正整数N。</p>
 <h4 id="输出格式：-1"><a href="#输出格式：-1" class="headerlink" title="输出格式："></a>输出格式：</h4><p>在一行中输出N的位数及其各位数字之和，中间用一个空格隔开。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">输入样例：</span><br><span class="line">321</span><br><span class="line">    </span><br><span class="line">输出样例：</span><br><span class="line">3 6</span><br></pre></td></tr></table></figure>
-<p>####程序</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> N, a, b = <span class="number">0</span>, sum =<span class="number">0</span>, d = <span class="number">0</span>;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;N);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">long</span> <span class="keyword">long</span> i=<span class="number">10</span>; d&lt;<span class="number">20</span>;i*=<span class="number">10</span>,d++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(N-b&gt;<span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">        a=((N-b)%i)/(i/<span class="number">10</span>);</span><br><span class="line">        b=b+a*(i/<span class="number">10</span>);</span><br><span class="line">        sum = sum + a;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d %d"</span>, d, sum);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//int 会溢出</span></span><br></pre></td></tr></table></figure>
+<h4 id="程序-3"><a href="#程序-3" class="headerlink" title="程序"></a>程序</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> N, a, b = <span class="number">0</span>, sum =<span class="number">0</span>, d = <span class="number">0</span>;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;N);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">long</span> <span class="keyword">long</span> i=<span class="number">10</span>; d&lt;<span class="number">20</span>;i*=<span class="number">10</span>,d++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(N-b&gt;<span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">        a=((N-b)%i)/(i/<span class="number">10</span>);</span><br><span class="line">        b=b+a*(i/<span class="number">10</span>);</span><br><span class="line">        sum = sum + a;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d %d"</span>, d, sum);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//int 会溢出</span></span><br></pre></td></tr></table></figure>
 
 <p>　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　</p>
 
@@ -369,12 +368,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/04/10/C%E8%AF%AD%E8%A8%80/" rel="prev" title="C语言">
-      <i class="fa fa-chevron-left"></i> C语言
+    <a href="/undefined/%2016107.html" rel="prev" title="Hello World">
+      <i class="fa fa-chevron-left"></i> Hello World
     </a></div>
       <div class="post-nav-item">
-    <a href="/2020/04/13/%E6%90%AD%E5%BB%BA-Github-Hexo-%E5%8D%9A%E5%AE%A2%E7%9A%84%E7%BB%8F%E5%8E%86%E2%80%9C/" rel="next" title="搭建 Github Hexo 博客的经历“">
-      搭建 Github Hexo 博客的经历“ <i class="fa fa-chevron-right"></i>
+    <a href="/undefined/%203184.html" rel="next" title="C语言">
+      C语言 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -434,7 +433,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#最大公约数和最小公倍数"><span class="nav-number">1.</span> <span class="nav-text">最大公约数和最小公倍数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#输入格式"><span class="nav-number">1.1.</span> <span class="nav-text">输入格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输出格式"><span class="nav-number">1.2.</span> <span class="nav-text">输出格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#程序"><span class="nav-number">1.3.</span> <span class="nav-text">程序</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#计算正整数中奇数的和"><span class="nav-number">2.</span> <span class="nav-text">计算正整数中奇数的和</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#输入格式-1"><span class="nav-number">2.1.</span> <span class="nav-text">输入格式:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输出格式-1"><span class="nav-number">2.2.</span> <span class="nav-text">输出格式:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#程序-1"><span class="nav-number">2.3.</span> <span class="nav-text">程序</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#找出整数中的最小值。"><span class="nav-number">3.</span> <span class="nav-text">找出整数中的最小值。</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#输入格式："><span class="nav-number">3.1.</span> <span class="nav-text">输入格式：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输出格式："><span class="nav-number">3.2.</span> <span class="nav-text">输出格式：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#程序-2"><span class="nav-number">3.3.</span> <span class="nav-text">程序</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#求数N的位数及其各位数字之和。"><span class="nav-number">4.</span> <span class="nav-text">求数N的位数及其各位数字之和。</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#输入格式：-1"><span class="nav-number">4.1.</span> <span class="nav-text">输入格式：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输出格式：-1"><span class="nav-number">4.2.</span> <span class="nav-text">输出格式：</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#最大公约数和最小公倍数"><span class="nav-number">1.</span> <span class="nav-text">最大公约数和最小公倍数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#输入格式"><span class="nav-number">1.1.</span> <span class="nav-text">输入格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输出格式"><span class="nav-number">1.2.</span> <span class="nav-text">输出格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#程序"><span class="nav-number">1.3.</span> <span class="nav-text">程序</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#计算正整数中奇数的和"><span class="nav-number">2.</span> <span class="nav-text">计算正整数中奇数的和</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#输入格式-1"><span class="nav-number">2.1.</span> <span class="nav-text">输入格式:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输出格式-1"><span class="nav-number">2.2.</span> <span class="nav-text">输出格式:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#程序-1"><span class="nav-number">2.3.</span> <span class="nav-text">程序</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#找出整数中的最小值。"><span class="nav-number">3.</span> <span class="nav-text">找出整数中的最小值。</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#输入格式："><span class="nav-number">3.1.</span> <span class="nav-text">输入格式：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输出格式："><span class="nav-number">3.2.</span> <span class="nav-text">输出格式：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#程序-2"><span class="nav-number">3.3.</span> <span class="nav-text">程序</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#求数N的位数及其各位数字之和。"><span class="nav-number">4.</span> <span class="nav-text">求数N的位数及其各位数字之和。</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#输入格式：-1"><span class="nav-number">4.1.</span> <span class="nav-text">输入格式：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输出格式：-1"><span class="nav-number">4.2.</span> <span class="nav-text">输出格式：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#程序-3"><span class="nav-number">4.3.</span> <span class="nav-text">程序</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -653,6 +652,32 @@
     POWERMODE.shake = false;
     document.body.addEventListener('input', POWERMODE);
   </script>
-
+<div class="moon-menu">
+  <div class="moon-menu-items">
+    
+    <div class="moon-menu-item" onclick="back2bottom()">
+      <i class='fa fa-chevron-down'></i>    </div>
+    
+    <div class="moon-menu-item" onclick="back2top()">
+      <i class='fa fa-chevron-up'></i>    </div>
+    
+  </div>
+  <div class="moon-menu-button" onclick="moonMenuClick()">
+    <svg class="moon-menu-svg">
+      <circle class="moon-menu-cricle" cx="50%" cy="50%" r="44%"></circle>
+      <circle class="moon-menu-border" cx="50%" cy="50%" r="48%"></circle>
+      <g class="moon-menu-points">
+        <circle class="moon-menu-point" r=".2rem" cx="0" cy="-.8rem"></circle>
+        <circle class="moon-menu-point" r=".2rem"></circle>
+        <circle class="moon-menu-point" r=".2rem" cx="0" cy=".8rem"></circle>
+      </g>
+    </svg>
+    <div class="moon-menu-icon">
+    </div>
+    <div class="moon-menu-text">
+    </div>
+  </div>
+</div>
+<script src="/js/injector.js"></script>
 </body>
 </html>
