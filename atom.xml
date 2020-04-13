@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://quinten.top/"/>
-  <updated>2020-04-13T05:37:52.928Z</updated>
+  <updated>2020-04-13T16:47:26.016Z</updated>
   <id>https://quinten.top/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>搭建 Github Hexo 博客的经历“</title>
-    <link href="https://quinten.top/undefined/%20612.html"/>
-    <id>https://quinten.top/undefined/%20612.html</id>
-    <published>2020-04-13T10:15:34.000Z</published>
-    <updated>2020-04-13T05:37:52.928Z</updated>
+    <title>搭建 Github Hexo 博客的经历</title>
+    <link href="https://quinten.top/%E6%90%AD%E5%BB%BAGithubHexo%E5%8D%9A%E5%AE%A2%E7%9A%84%E7%BB%8F%E5%8E%86/"/>
+    <id>https://quinten.top/%E6%90%AD%E5%BB%BAGithubHexo%E5%8D%9A%E5%AE%A2%E7%9A%84%E7%BB%8F%E5%8E%86/</id>
+    <published>2020-04-13T02:15:34.855Z</published>
+    <updated>2020-04-13T16:47:26.016Z</updated>
     
     <summary type="html">
     
@@ -30,46 +30,19 @@
     </summary>
     
     
-      <category term="blog 碎碎念" scheme="https://quinten.top/categories/blog-%E7%A2%8E%E7%A2%8E%E5%BF%B5/"/>
+      <category term="碎碎念" scheme="https://quinten.top/categories/%E7%A2%8E%E7%A2%8E%E5%BF%B5/"/>
     
     
-      <category term="blog 碎碎念" scheme="https://quinten.top/tags/blog-%E7%A2%8E%E7%A2%8E%E5%BF%B5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C语言</title>
-    <link href="https://quinten.top/undefined/%203184.html"/>
-    <id>https://quinten.top/undefined/%203184.html</id>
-    <published>2020-04-13T03:53:20.499Z</published>
-    <updated>2020-04-13T05:21:05.674Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;font color=red&gt;说明&lt;/font&gt;：本文为测试文章，&lt;del&gt;瞎写的&lt;/del&gt;&lt;/p&gt;
-&lt;h3 id=&quot;最大公约数和最小公倍数&quot;&gt;&lt;a href=&quot;#最大公约数和最小公倍数&quot; class=&quot;headerlink&quot; title=&quot;最大公约数和最小公倍数&quot;&gt;&lt;/a&gt;最大公约数和最小公倍数&lt;/h3&gt;&lt;h4 id=&quot;输入格式&quot;&gt;&lt;a href=&quot;#输入格式&quot; class=&quot;headerlink&quot; title=&quot;输入格式&quot;&gt;&lt;/a&gt;输入格式&lt;/h4&gt;&lt;p&gt;输入在一行中给出两个正整数M和N（≤1000）。&lt;/p&gt;
-&lt;h4 id=&quot;输出格式&quot;&gt;&lt;a href=&quot;#输出格式&quot; class=&quot;headerlink&quot; title=&quot;输出格式&quot;&gt;&lt;/a&gt;输出格式&lt;/h4&gt;&lt;p&gt;在一行中顺序输出M和N的最大公约数和最小公倍数，两数字间以1空格分隔&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="C语言基础" scheme="https://quinten.top/categories/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/"/>
-    
-      <category term="test" scheme="https://quinten.top/categories/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/test/"/>
-    
-    
-      <category term="C语言基础" scheme="https://quinten.top/tags/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/"/>
-    
-      <category term="标签2" scheme="https://quinten.top/tags/%E6%A0%87%E7%AD%BE2/"/>
+      <category term="-碎碎念 -blog" scheme="https://quinten.top/tags/%E7%A2%8E%E7%A2%8E%E5%BF%B5-blog/"/>
     
   </entry>
   
   <entry>
     <title>C语言</title>
-    <link href="https://quinten.top/undefined/%203183.html"/>
-    <id>https://quinten.top/undefined/%203183.html</id>
+    <link href="https://quinten.top/C%E8%AF%AD%E8%A8%80/"/>
+    <id>https://quinten.top/C%E8%AF%AD%E8%A8%80/</id>
     <published>2020-04-10T14:26:32.998Z</published>
-    <updated>2020-04-13T05:29:22.538Z</updated>
+    <updated>2020-04-13T16:47:28.506Z</updated>
     
     <summary type="html">
     
@@ -82,21 +55,17 @@
     
       <category term="C语言基础" scheme="https://quinten.top/categories/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/"/>
     
-      <category term="test" scheme="https://quinten.top/categories/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/test/"/>
-    
     
       <category term="C语言基础" scheme="https://quinten.top/tags/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/"/>
-    
-      <category term="标签2" scheme="https://quinten.top/tags/%E6%A0%87%E7%AD%BE2/"/>
     
   </entry>
   
   <entry>
-    <title>Hello World</title>
-    <link href="https://quinten.top/undefined/%2016107.html"/>
-    <id>https://quinten.top/undefined/%2016107.html</id>
+    <title>HelloWorld</title>
+    <link href="https://quinten.top/hello-world/"/>
+    <id>https://quinten.top/hello-world/</id>
     <published>2020-04-10T07:02:34.566Z</published>
-    <updated>2020-04-13T05:21:05.672Z</updated>
+    <updated>2020-04-13T16:47:30.705Z</updated>
     
     <summary type="html">
     
