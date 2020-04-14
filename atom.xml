@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://quinten.top/"/>
-  <updated>2020-04-14T05:28:49.041Z</updated>
+  <updated>2020-04-14T12:24:34.693Z</updated>
   <id>https://quinten.top/</id>
   
   <author>
@@ -18,16 +18,28 @@
   
   <entry>
     <title>Problem Set 4</title>
-    <link href="https://quinten.top/uncategorized/63318/"/>
-    <id>https://quinten.top/uncategorized/63318/</id>
+    <link href="https://quinten.top/C/63318/"/>
+    <id>https://quinten.top/C/63318/</id>
     <published>2020-04-14T11:29:05.000Z</published>
-    <updated>2020-04-14T05:28:49.041Z</updated>
+    <updated>2020-04-14T12:24:34.693Z</updated>
     
     <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;C语言基础小程序（4）&quot;&gt;&lt;a href=&quot;#C语言基础小程序（4）&quot; class=&quot;headerlink&quot; title=&quot;C语言基础小程序（4）&quot;&gt;&lt;/a&gt;C语言基础小程序（4）&lt;/h3&gt;&lt;h3 id=&quot;最大公约数和最小公倍数&quot;&gt;&lt;a
+        
+      
     
     </summary>
     
     
+      <category term="C" scheme="https://quinten.top/categories/C/"/>
+    
+    
+      <category term="C" scheme="https://quinten.top/tags/C/"/>
     
   </entry>
   
@@ -36,7 +48,7 @@
     <link href="https://quinten.top/C/13591/"/>
     <id>https://quinten.top/C/13591/</id>
     <published>2020-04-14T11:29:00.000Z</published>
-    <updated>2020-04-14T06:46:40.924Z</updated>
+    <updated>2020-04-14T12:24:36.192Z</updated>
     
     <summary type="html">
     
@@ -44,8 +56,7 @@
       
         
         
-          &lt;h3 id=&quot;求一元二次方程的根&quot;&gt;&lt;a href=&quot;#求一元二次方程的根&quot; class=&quot;headerlink&quot; title=&quot;求一元二次方程的根&quot;&gt;&lt;/a&gt;求一元二次方程的根&lt;/h3&gt;&lt;p&gt;本题目要求一元二次方程的根，结果保留2位小数。&lt;/p&gt;
-&lt;h4
+          &lt;h3 id=&quot;C语言基础小程序（3）&quot;&gt;&lt;a href=&quot;#C语言基础小程序（3）&quot; class=&quot;headerlink&quot; title=&quot;C语言基础小程序（3）&quot;&gt;&lt;/a&gt;C语言基础小程序（3）&lt;/h3&gt;&lt;h3 id=&quot;求一元二次方程的根&quot;&gt;&lt;a
         
       
     
@@ -64,17 +75,11 @@
     <link href="https://quinten.top/C/62934/"/>
     <id>https://quinten.top/C/62934/</id>
     <published>2020-04-14T11:24:02.000Z</published>
-    <updated>2020-04-14T07:46:17.525Z</updated>
+    <updated>2020-04-14T12:32:20.280Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h3 id=&quot;计算华氏温度&quot;&gt;&lt;a href=&quot;#计算华氏温度&quot; class=&quot;headerlink&quot; title=&quot;计算华氏温度&quot;&gt;&lt;/a&gt;计算华氏温度&lt;/h3&gt;&lt;p&gt;本题要求编写程序，计算摄氏温度26°C
-        
-      
+      &lt;center&gt;C语言基础小程序（2）&lt;/center&gt;
     
     </summary>
     
@@ -91,38 +96,11 @@
     <link href="https://quinten.top/C/62615/"/>
     <id>https://quinten.top/C/62615/</id>
     <published>2020-04-14T10:48:32.000Z</published>
-    <updated>2020-04-14T05:42:06.062Z</updated>
+    <updated>2020-04-14T12:30:16.999Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h3 id=&quot;Hello-World&quot;&gt;&lt;a href=&quot;#Hello-World&quot; class=&quot;headerlink&quot; title=&quot;Hello World!&quot;&gt;&lt;/a&gt;Hello World!&lt;/h3&gt;&lt;p&gt;本题要求编写程序，输出一个短句“Hello
-        
-      
-    
-    </summary>
-    
-    
-      <category term="C" scheme="https://quinten.top/categories/C/"/>
-    
-    
-      <category term="C" scheme="https://quinten.top/tags/C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>猜数字游戏</title>
-    <link href="https://quinten.top/C/58900/"/>
-    <id>https://quinten.top/C/58900/</id>
-    <published>2020-04-14T08:07:09.000Z</published>
-    <updated>2020-04-14T07:20:36.856Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;猜数字游戏是令游戏机随机产生一个100以内的正整数，用户输入一个数对其进行猜测，需要你编写程序自动对其与随机产生的被猜数进行比较，并提示大了（“Too big”），还是小了（“Too small”），相等表示猜到了。如果猜到，则结束程序。程序还要求统计猜的次数，如果1次猜出该数，提示“Bingo!”；如果3次以内猜到该数，则提示“Lucky You!”；如果超过3次但是在N（&amp;gt;3）次以内（包括第N次）猜到该数，则提示“Good Guess!”；如果超过N次都没有猜到，则提示“Game Over”，并结束程序。如果在到达N次之前，用户输入了一个负数，也输出“Game Over”，并结束程序。&lt;/p&gt;
+      &lt;center&gt;**C语言基础小程序（1）**&lt;/center&gt;
     
     </summary>
     
@@ -136,10 +114,10 @@
   
   <entry>
     <title>搭建 Github Hexo 博客的经历</title>
-    <link href="https://quinten.top/%E7%A2%8E%E7%A2%8E%E5%BF%B5/28984/"/>
-    <id>https://quinten.top/%E7%A2%8E%E7%A2%8E%E5%BF%B5/28984/</id>
+    <link href="https://quinten.top/mumbling/28984/"/>
+    <id>https://quinten.top/mumbling/28984/</id>
     <published>2020-04-13T02:15:34.855Z</published>
-    <updated>2020-04-14T03:05:50.886Z</updated>
+    <updated>2020-04-14T12:33:03.918Z</updated>
     
     <summary type="html">
     
@@ -148,10 +126,12 @@
     </summary>
     
     
-      <category term="碎碎念" scheme="https://quinten.top/categories/%E7%A2%8E%E7%A2%8E%E5%BF%B5/"/>
+      <category term="mumbling" scheme="https://quinten.top/categories/mumbling/"/>
     
     
-      <category term="-碎碎念 -blog" scheme="https://quinten.top/tags/%E7%A2%8E%E7%A2%8E%E5%BF%B5-blog/"/>
+      <category term="碎碎念" scheme="https://quinten.top/tags/%E7%A2%8E%E7%A2%8E%E5%BF%B5/"/>
+    
+      <category term="blog" scheme="https://quinten.top/tags/blog/"/>
     
   </entry>
   
