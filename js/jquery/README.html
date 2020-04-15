@@ -73,14 +73,21 @@
   <title> | QuintenLiao
 </title>
   
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163377933-1"></script>
     <script>
-      if (CONFIG.hostname === location.hostname) {
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-163377933-1');
+      function sendPageView() {
+        if (CONFIG.hostname !== location.hostname) return;
+        var uid = localStorage.getItem('uid') || (Math.random() + '.' + Math.random());
+        localStorage.setItem('uid', uid);
+        navigator.sendBeacon('https://www.google-analytics.com/collect', new URLSearchParams({
+          v  : 1,
+          tid: 'UA-163377933-1',
+          cid: uid,
+          t  : 'pageview',
+          dp : encodeURIComponent(location.pathname)
+        }));
       }
+      document.addEventListener('pjax:complete', sendPageView);
+      sendPageView();
     </script>
 
 
@@ -149,37 +156,37 @@
 
 <nav class="site-nav">
   <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-首页">
+        <li class="menu-item menu-item-home">
 
     <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
 
   </li>
-        <li class="menu-item menu-item-关于">
+        <li class="menu-item menu-item-about">
 
     <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
 
   </li>
-        <li class="menu-item menu-item-标签">
+        <li class="menu-item menu-item-tags">
 
     <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
 
   </li>
-        <li class="menu-item menu-item-分类">
+        <li class="menu-item menu-item-categories">
 
     <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
 
   </li>
-        <li class="menu-item menu-item-归档">
+        <li class="menu-item menu-item-archives">
 
     <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
-        <li class="menu-item menu-item-english">
+        <li class="menu-item menu-item-switch_lang">
 
-    <a href="/en/" rel="section"><i class="fa fa-calendar fa-fw"></i>English</a>
+    <a href="https://quinten.top/en/" rel="section"><i class="fa fa-language fa-fw"></i>English</a>
 
   </li>
-        <li class="menu-item menu-item-站点地图">
+        <li class="menu-item menu-item-sitemap">
 
     <a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a>
 
@@ -270,14 +277,19 @@
 <p>If upgrading, please see the <a href="https://blog.jquery.com/2019/05/01/jquery-3-4-1-triggering-focus-events-in-ie-and-finding-root-elements-in-ios-10/" target="_blank" rel="noopener">blog post for 3.4.1</a>. This includes notable differences from the previous version and a more readable changelog.</p>
 <h2 id="Including-jQuery"><a href="#Including-jQuery" class="headerlink" title="Including jQuery"></a>Including jQuery</h2><p>Below are some of the most common ways to include jQuery.</p>
 <h3 id="Browser"><a href="#Browser" class="headerlink" title="Browser"></a>Browser</h3><h4 id="Script-tag"><a href="#Script-tag" class="headerlink" title="Script tag"></a>Script tag</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://code.jquery.com/jquery-3.4.1.min.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
 <h4 id="Babel"><a href="#Babel" class="headerlink" title="Babel"></a>Babel</h4><p><a href="http://babeljs.io/" target="_blank" rel="noopener">Babel</a> is a next generation JavaScript compiler. One of the features is the ability to use ES6/ES2015 modules now, even though browsers do not yet support this feature natively.</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> $ <span class="keyword">from</span> <span class="string">"jquery"</span>;</span><br></pre></td></tr></table></figure>
+
 <h4 id="Browserify-Webpack"><a href="#Browserify-Webpack" class="headerlink" title="Browserify/Webpack"></a>Browserify/Webpack</h4><p>There are several ways to use <a href="http://browserify.org/" target="_blank" rel="noopener">Browserify</a> and <a href="https://webpack.github.io/" target="_blank" rel="noopener">Webpack</a>. For more information on using these tools, please refer to the corresponding project’s documention. In the script, including jQuery will usually look like this…</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> $ = <span class="built_in">require</span>(<span class="string">"jquery"</span>);</span><br></pre></td></tr></table></figure>
+
 <h4 id="AMD-Asynchronous-Module-Definition"><a href="#AMD-Asynchronous-Module-Definition" class="headerlink" title="AMD (Asynchronous Module Definition)"></a>AMD (Asynchronous Module Definition)</h4><p>AMD is a module format built for the browser. For more information, we recommend <a href="http://requirejs.org/docs/whyamd.html" target="_blank" rel="noopener">require.js’ documentation</a>.</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">define([<span class="string">"jquery"</span>], <span class="function"><span class="keyword">function</span>(<span class="params">$</span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
 <h3 id="Node"><a href="#Node" class="headerlink" title="Node"></a>Node</h3><p>To include jQuery in <a href="nodejs.org">Node</a>, first install with npm.</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install jquery</span><br></pre></td></tr></table></figure>
+
 <p>For jQuery to work in Node, a window with a document is required. Since no such window exists natively in Node, one can be mocked by tools such as <a href="https://github.com/tmpvar/jsdom" target="_blank" rel="noopener">jsdom</a>. This can be useful for testing purposes.</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">require</span>(<span class="string">"jsdom"</span>).env(<span class="string">""</span>, <span class="function"><span class="keyword">function</span>(<span class="params">err, window</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (err) &#123;</span><br><span class="line">		<span class="built_in">console</span>.error(err);</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">var</span> $ = <span class="built_in">require</span>(<span class="string">"jquery"</span>)(<span class="built_in">window</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
@@ -361,18 +373,21 @@
 <div class="site-state-wrap motion-element">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
-          <a href="/archives">
+          <a href="/archives/">
+        
           <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
+          
         <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
+          
         <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
@@ -391,16 +406,6 @@
   </div>
 
 
-  <div class="links-of-blogroll motion-element">
-    <div class="links-of-blogroll-title">
-      
-    </div>
-    <ul class="links-of-blogroll-list">
-        <li class="links-of-blogroll-item">
-          <a href="https://quinten.top/en" title="https:&#x2F;&#x2F;quinten.top&#x2F;en">English</a>
-        </li>
-    </ul>
-  </div>
 
       </div>
         <div class="back-to-top motion-element">
@@ -442,6 +447,9 @@
     <span title="站点阅读时长">20 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+  <div class="addthis_inline_share_toolbox">
+    <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5e96f97f54b1c7b0" async="async"></script>
   </div>
 
 
