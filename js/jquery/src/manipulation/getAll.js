@@ -1,3 +1,32 @@
-// build time:Wed Apr 15 2020 21:36:38 GMT+0800 (GMT+08:00)
-define(["../core","../core/nodeName"],function(e,n){"use strict";function r(r,t){var f;if(typeof r.getElementsByTagName!=="undefined"){f=r.getElementsByTagName(t||"*")}else if(typeof r.querySelectorAll!=="undefined"){f=r.querySelectorAll(t||"*")}else{f=[]}if(t===undefined||t&&n(r,t)){return e.merge([r],f)}return f}return r});
-//rebuild by neat 
+define( [
+	"../core",
+	"../core/nodeName"
+], function( jQuery, nodeName ) {
+
+"use strict";
+
+function getAll( context, tag ) {
+
+	// Support: IE <=9 - 11 only
+	// Use typeof to avoid zero-argument method invocation on host objects (#15151)
+	var ret;
+
+	if ( typeof context.getElementsByTagName !== "undefined" ) {
+		ret = context.getElementsByTagName( tag || "*" );
+
+	} else if ( typeof context.querySelectorAll !== "undefined" ) {
+		ret = context.querySelectorAll( tag || "*" );
+
+	} else {
+		ret = [];
+	}
+
+	if ( tag === undefined || tag && nodeName( context, tag ) ) {
+		return jQuery.merge( [ context ], ret );
+	}
+
+	return ret;
+}
+
+return getAll;
+} );

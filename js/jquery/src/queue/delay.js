@@ -1,3 +1,24 @@
-// build time:Wed Apr 15 2020 21:36:38 GMT+0800 (GMT+08:00)
-define(["../core","../queue","../effects"],function(e){"use strict";e.fn.delay=function(n,t){n=e.fx?e.fx.speeds[n]||n:n;t=t||"fx";return this.queue(t,function(e,t){var u=window.setTimeout(e,n);t.stop=function(){window.clearTimeout(u)}})};return e.fn.delay});
-//rebuild by neat 
+define( [
+	"../core",
+	"../queue",
+	"../effects" // Delay is optional because of this dependency
+], function( jQuery ) {
+
+"use strict";
+
+// Based off of the plugin by Clint Helfers, with permission.
+// https://web.archive.org/web/20100324014747/http://blindsignals.com/index.php/2009/07/jquery-delay/
+jQuery.fn.delay = function( time, type ) {
+	time = jQuery.fx ? jQuery.fx.speeds[ time ] || time : time;
+	type = type || "fx";
+
+	return this.queue( type, function( next, hooks ) {
+		var timeout = window.setTimeout( next, time );
+		hooks.stop = function() {
+			window.clearTimeout( timeout );
+		};
+	} );
+};
+
+return jQuery.fn.delay;
+} );

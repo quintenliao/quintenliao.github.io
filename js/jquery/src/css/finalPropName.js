@@ -1,3 +1,42 @@
-// build time:Wed Apr 15 2020 21:36:38 GMT+0800 (GMT+08:00)
-define(["../var/document","../core"],function(e,r){"use strict";var n=["Webkit","Moz","ms"],t=e.createElement("div").style,i={};function u(e){var r=e[0].toUpperCase()+e.slice(1),i=n.length;while(i--){e=n[i]+r;if(e in t){return e}}}function c(e){var n=r.cssProps[e]||i[e];if(n){return n}if(e in t){return e}return i[e]=u(e)||e}return c});
-//rebuild by neat 
+define( [
+	"../var/document",
+	"../core"
+], function( document, jQuery ) {
+
+"use strict";
+
+var cssPrefixes = [ "Webkit", "Moz", "ms" ],
+	emptyStyle = document.createElement( "div" ).style,
+	vendorProps = {};
+
+// Return a vendor-prefixed property or undefined
+function vendorPropName( name ) {
+
+	// Check for vendor prefixed names
+	var capName = name[ 0 ].toUpperCase() + name.slice( 1 ),
+		i = cssPrefixes.length;
+
+	while ( i-- ) {
+		name = cssPrefixes[ i ] + capName;
+		if ( name in emptyStyle ) {
+			return name;
+		}
+	}
+}
+
+// Return a potentially-mapped jQuery.cssProps or vendor prefixed property
+function finalPropName( name ) {
+	var final = jQuery.cssProps[ name ] || vendorProps[ name ];
+
+	if ( final ) {
+		return final;
+	}
+	if ( name in emptyStyle ) {
+		return name;
+	}
+	return vendorProps[ name ] = vendorPropName( name ) || name;
+}
+
+return finalPropName;
+
+} );

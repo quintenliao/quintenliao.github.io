@@ -1,3 +1,29 @@
-// build time:Wed Apr 15 2020 21:36:38 GMT+0800 (GMT+08:00)
-define(["../core","../event","./trigger"],function(e){"use strict";e.each(("blur focus focusin focusout resize scroll click dblclick "+"mousedown mouseup mousemove mouseover mouseout mouseenter mouseleave "+"change select submit keydown keypress keyup contextmenu").split(" "),function(o,u){e.fn[u]=function(e,o){return arguments.length>0?this.on(u,null,e,o):this.trigger(u)}});e.fn.extend({hover:function(e,o){return this.mouseenter(e).mouseleave(o||e)}})});
-//rebuild by neat 
+define( [
+	"../core",
+
+	"../event",
+	"./trigger"
+], function( jQuery ) {
+
+"use strict";
+
+jQuery.each( ( "blur focus focusin focusout resize scroll click dblclick " +
+	"mousedown mouseup mousemove mouseover mouseout mouseenter mouseleave " +
+	"change select submit keydown keypress keyup contextmenu" ).split( " " ),
+	function( i, name ) {
+
+	// Handle event binding
+	jQuery.fn[ name ] = function( data, fn ) {
+		return arguments.length > 0 ?
+			this.on( name, null, data, fn ) :
+			this.trigger( name );
+	};
+} );
+
+jQuery.fn.extend( {
+	hover: function( fnOver, fnOut ) {
+		return this.mouseenter( fnOver ).mouseleave( fnOut || fnOver );
+	}
+} );
+
+} );

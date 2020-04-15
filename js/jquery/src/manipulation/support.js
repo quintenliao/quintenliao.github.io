@@ -1,3 +1,35 @@
-// build time:Wed Apr 15 2020 21:36:38 GMT+0800 (GMT+08:00)
-define(["../var/document","../var/support"],function(e,t){"use strict";(function(){var n=e.createDocumentFragment(),r=n.appendChild(e.createElement("div")),c=e.createElement("input");c.setAttribute("type","radio");c.setAttribute("checked","checked");c.setAttribute("name","t");r.appendChild(c);t.checkClone=r.cloneNode(true).cloneNode(true).lastChild.checked;r.innerHTML="<textarea>x</textarea>";t.noCloneChecked=!!r.cloneNode(true).lastChild.defaultValue})();return t});
-//rebuild by neat 
+define( [
+	"../var/document",
+	"../var/support"
+], function( document, support ) {
+
+"use strict";
+
+( function() {
+	var fragment = document.createDocumentFragment(),
+		div = fragment.appendChild( document.createElement( "div" ) ),
+		input = document.createElement( "input" );
+
+	// Support: Android 4.0 - 4.3 only
+	// Check state lost if the name is set (#11217)
+	// Support: Windows Web Apps (WWA)
+	// `name` and `type` must use .setAttribute for WWA (#14901)
+	input.setAttribute( "type", "radio" );
+	input.setAttribute( "checked", "checked" );
+	input.setAttribute( "name", "t" );
+
+	div.appendChild( input );
+
+	// Support: Android <=4.1 only
+	// Older WebKit doesn't clone checked state correctly in fragments
+	support.checkClone = div.cloneNode( true ).cloneNode( true ).lastChild.checked;
+
+	// Support: IE <=11 only
+	// Make sure textarea (and checkbox) defaultValue is properly cloned
+	div.innerHTML = "<textarea>x</textarea>";
+	support.noCloneChecked = !!div.cloneNode( true ).lastChild.defaultValue;
+} )();
+
+return support;
+
+} );

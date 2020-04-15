@@ -1,3 +1,7 @@
-// build time:Wed Apr 15 2020 21:36:38 GMT+0800 (GMT+08:00)
-define(function(){"use strict";return/^<([a-z][^\/\0>:\x20\t\r\n\f]*)[\x20\t\r\n\f]*\/?>(?:<\/\1>|)$/i});
-//rebuild by neat 
+define( function() {
+	"use strict";
+
+	// rsingleTag matches a string consisting of a single HTML element with no attributes
+	// and captures the element's name
+	return ( /^<([a-z][^\/\0>:\x20\t\r\n\f]*)[\x20\t\r\n\f]*\/?>(?:<\/\1>|)$/i );
+} );

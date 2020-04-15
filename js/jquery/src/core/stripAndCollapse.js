@@ -1,3 +1,14 @@
-// build time:Wed Apr 15 2020 21:36:38 GMT+0800 (GMT+08:00)
-define(["../var/rnothtmlwhite"],function(t){"use strict";function n(n){var r=n.match(t)||[];return r.join(" ")}return n});
-//rebuild by neat 
+define( [
+	"../var/rnothtmlwhite"
+], function( rnothtmlwhite ) {
+	"use strict";
+
+	// Strip and collapse whitespace according to HTML spec
+	// https://infra.spec.whatwg.org/#strip-and-collapse-ascii-whitespace
+	function stripAndCollapse( value ) {
+		var tokens = value.match( rnothtmlwhite ) || [];
+		return tokens.join( " " );
+	}
+
+	return stripAndCollapse;
+} );

@@ -1,3 +1,191 @@
-// build time:Wed Apr 15 2020 21:36:38 GMT+0800 (GMT+08:00)
-define(["../core","../core/stripAndCollapse","./support","../core/nodeName","../var/isFunction","../core/init"],function(e,t,n,r,i){"use strict";var o=/\r/g;e.fn.extend({val:function(t){var n,r,l,a=this[0];if(!arguments.length){if(a){n=e.valHooks[a.type]||e.valHooks[a.nodeName.toLowerCase()];if(n&&"get"in n&&(r=n.get(a,"value"))!==undefined){return r}r=a.value;if(typeof r==="string"){return r.replace(o,"")}return r==null?"":r}return}l=i(t);return this.each(function(r){var i;if(this.nodeType!==1){return}if(l){i=t.call(this,r,e(this).val())}else{i=t}if(i==null){i=""}else if(typeof i==="number"){i+=""}else if(Array.isArray(i)){i=e.map(i,function(e){return e==null?"":e+""})}n=e.valHooks[this.type]||e.valHooks[this.nodeName.toLowerCase()];if(!n||!("set"in n)||n.set(this,i,"value")===undefined){this.value=i}})}});e.extend({valHooks:{option:{get:function(n){var r=e.find.attr(n,"value");return r!=null?r:t(e.text(n))}},select:{get:function(t){var n,i,o,l=t.options,a=t.selectedIndex,s=t.type==="select-one",u=s?null:[],f=s?a+1:l.length;if(a<0){o=f}else{o=s?a:0}for(;o<f;o++){i=l[o];if((i.selected||o===a)&&!i.disabled&&(!i.parentNode.disabled||!r(i.parentNode,"optgroup"))){n=e(i).val();if(s){return n}u.push(n)}}return u},set:function(t,n){var r,i,o=t.options,l=e.makeArray(n),a=o.length;while(a--){i=o[a];if(i.selected=e.inArray(e.valHooks.option.get(i),l)>-1){r=true}}if(!r){t.selectedIndex=-1}return l}}}});e.each(["radio","checkbox"],function(){e.valHooks[this]={set:function(t,n){if(Array.isArray(n)){return t.checked=e.inArray(e(t).val(),n)>-1}}};if(!n.checkOn){e.valHooks[this].get=function(e){return e.getAttribute("value")===null?"on":e.value}}})});
-//rebuild by neat 
+define( [
+	"../core",
+	"../core/stripAndCollapse",
+	"./support",
+	"../core/nodeName",
+	"../var/isFunction",
+
+	"../core/init"
+], function( jQuery, stripAndCollapse, support, nodeName, isFunction ) {
+
+"use strict";
+
+var rreturn = /\r/g;
+
+jQuery.fn.extend( {
+	val: function( value ) {
+		var hooks, ret, valueIsFunction,
+			elem = this[ 0 ];
+
+		if ( !arguments.length ) {
+			if ( elem ) {
+				hooks = jQuery.valHooks[ elem.type ] ||
+					jQuery.valHooks[ elem.nodeName.toLowerCase() ];
+
+				if ( hooks &&
+					"get" in hooks &&
+					( ret = hooks.get( elem, "value" ) ) !== undefined
+				) {
+					return ret;
+				}
+
+				ret = elem.value;
+
+				// Handle most common string cases
+				if ( typeof ret === "string" ) {
+					return ret.replace( rreturn, "" );
+				}
+
+				// Handle cases where value is null/undef or number
+				return ret == null ? "" : ret;
+			}
+
+			return;
+		}
+
+		valueIsFunction = isFunction( value );
+
+		return this.each( function( i ) {
+			var val;
+
+			if ( this.nodeType !== 1 ) {
+				return;
+			}
+
+			if ( valueIsFunction ) {
+				val = value.call( this, i, jQuery( this ).val() );
+			} else {
+				val = value;
+			}
+
+			// Treat null/undefined as ""; convert numbers to string
+			if ( val == null ) {
+				val = "";
+
+			} else if ( typeof val === "number" ) {
+				val += "";
+
+			} else if ( Array.isArray( val ) ) {
+				val = jQuery.map( val, function( value ) {
+					return value == null ? "" : value + "";
+				} );
+			}
+
+			hooks = jQuery.valHooks[ this.type ] || jQuery.valHooks[ this.nodeName.toLowerCase() ];
+
+			// If set returns undefined, fall back to normal setting
+			if ( !hooks || !( "set" in hooks ) || hooks.set( this, val, "value" ) === undefined ) {
+				this.value = val;
+			}
+		} );
+	}
+} );
+
+jQuery.extend( {
+	valHooks: {
+		option: {
+			get: function( elem ) {
+
+				var val = jQuery.find.attr( elem, "value" );
+				return val != null ?
+					val :
+
+					// Support: IE <=10 - 11 only
+					// option.text throws exceptions (#14686, #14858)
+					// Strip and collapse whitespace
+					// https://html.spec.whatwg.org/#strip-and-collapse-whitespace
+					stripAndCollapse( jQuery.text( elem ) );
+			}
+		},
+		select: {
+			get: function( elem ) {
+				var value, option, i,
+					options = elem.options,
+					index = elem.selectedIndex,
+					one = elem.type === "select-one",
+					values = one ? null : [],
+					max = one ? index + 1 : options.length;
+
+				if ( index < 0 ) {
+					i = max;
+
+				} else {
+					i = one ? index : 0;
+				}
+
+				// Loop through all the selected options
+				for ( ; i < max; i++ ) {
+					option = options[ i ];
+
+					// Support: IE <=9 only
+					// IE8-9 doesn't update selected after form reset (#2551)
+					if ( ( option.selected || i === index ) &&
+
+							// Don't return options that are disabled or in a disabled optgroup
+							!option.disabled &&
+							( !option.parentNode.disabled ||
+								!nodeName( option.parentNode, "optgroup" ) ) ) {
+
+						// Get the specific value for the option
+						value = jQuery( option ).val();
+
+						// We don't need an array for one selects
+						if ( one ) {
+							return value;
+						}
+
+						// Multi-Selects return an array
+						values.push( value );
+					}
+				}
+
+				return values;
+			},
+
+			set: function( elem, value ) {
+				var optionSet, option,
+					options = elem.options,
+					values = jQuery.makeArray( value ),
+					i = options.length;
+
+				while ( i-- ) {
+					option = options[ i ];
+
+					/* eslint-disable no-cond-assign */
+
+					if ( option.selected =
+						jQuery.inArray( jQuery.valHooks.option.get( option ), values ) > -1
+					) {
+						optionSet = true;
+					}
+
+					/* eslint-enable no-cond-assign */
+				}
+
+				// Force browsers to behave consistently when non-matching value is set
+				if ( !optionSet ) {
+					elem.selectedIndex = -1;
+				}
+				return values;
+			}
+		}
+	}
+} );
+
+// Radios and checkboxes getter/setter
+jQuery.each( [ "radio", "checkbox" ], function() {
+	jQuery.valHooks[ this ] = {
+		set: function( elem, value ) {
+			if ( Array.isArray( value ) ) {
+				return ( elem.checked = jQuery.inArray( jQuery( elem ).val(), value ) > -1 );
+			}
+		}
+	};
+	if ( !support.checkOn ) {
+		jQuery.valHooks[ this ].get = function( elem ) {
+			return elem.getAttribute( "value" ) === null ? "on" : elem.value;
+		};
+	}
+} );
+
+} );

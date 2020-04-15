@@ -1,3 +1,30 @@
-// build time:Wed Apr 15 2020 21:36:38 GMT+0800 (GMT+08:00)
-define(["../core"],function(r){"use strict";r.parseXML=function(e){var n;if(!e||typeof e!=="string"){return null}try{n=(new window.DOMParser).parseFromString(e,"text/xml")}catch(t){n=undefined}if(!n||n.getElementsByTagName("parsererror").length){r.error("Invalid XML: "+e)}return n};return r.parseXML});
-//rebuild by neat 
+define( [
+	"../core"
+], function( jQuery ) {
+
+"use strict";
+
+// Cross-browser xml parsing
+jQuery.parseXML = function( data ) {
+	var xml;
+	if ( !data || typeof data !== "string" ) {
+		return null;
+	}
+
+	// Support: IE 9 - 11 only
+	// IE throws on parseFromString with invalid input.
+	try {
+		xml = ( new window.DOMParser() ).parseFromString( data, "text/xml" );
+	} catch ( e ) {
+		xml = undefined;
+	}
+
+	if ( !xml || xml.getElementsByTagName( "parsererror" ).length ) {
+		jQuery.error( "Invalid XML: " + data );
+	}
+	return xml;
+};
+
+return jQuery.parseXML;
+
+} );

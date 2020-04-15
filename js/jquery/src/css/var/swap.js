@@ -1,3 +1,26 @@
-// build time:Wed Apr 15 2020 21:36:38 GMT+0800 (GMT+08:00)
-define(function(){"use strict";return function(n,t,e,r){var i,f,s={};for(f in t){s[f]=n.style[f];n.style[f]=t[f]}i=e.apply(n,r||[]);for(f in t){n.style[f]=s[f]}return i}});
-//rebuild by neat 
+define( function() {
+
+"use strict";
+
+// A method for quickly swapping in/out CSS properties to get correct calculations.
+return function( elem, options, callback, args ) {
+	var ret, name,
+		old = {};
+
+	// Remember the old values, and insert the new ones
+	for ( name in options ) {
+		old[ name ] = elem.style[ name ];
+		elem.style[ name ] = options[ name ];
+	}
+
+	ret = callback.apply( elem, args || [] );
+
+	// Revert the old values
+	for ( name in options ) {
+		elem.style[ name ] = old[ name ];
+	}
+
+	return ret;
+};
+
+} );
