@@ -1,6 +1,3 @@
-define( function() {
-	"use strict";
-
-	// All support tests are defined in their respective modules.
-	return {};
-} );
+// build time:Wed Apr 15 2020 21:36:38 GMT+0800 (GMT+08:00)
+define(function(){"use strict";return{}});
+//rebuild by neat 

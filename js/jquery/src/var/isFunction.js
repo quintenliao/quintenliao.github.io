@@ -1,13 +1,3 @@
-define( function() {
-	"use strict";
-
-	return function isFunction( obj ) {
-
-      // Support: Chrome <=57, Firefox <=52
-      // In some browsers, typeof returns "function" for HTML <object> elements
-      // (i.e., `typeof document.createElement( "object" ) === "function"`).
-      // We don't want to classify *any* DOM node as a function.
-      return typeof obj === "function" && typeof obj.nodeType !== "number";
-  };
-
-} );
+// build time:Wed Apr 15 2020 21:36:38 GMT+0800 (GMT+08:00)
+define(function(){"use strict";return function n(e){return typeof e==="function"&&typeof e.nodeType!=="number"}});
+//rebuild by neat 

@@ -1,19 +1,3 @@
-define( function() {
-
-"use strict";
-
-/**
- * Determines whether an object can have data
- */
-return function( owner ) {
-
-	// Accepts only:
-	//  - Node
-	//    - Node.ELEMENT_NODE
-	//    - Node.DOCUMENT_NODE
-	//  - Object
-	//    - Any
-	return owner.nodeType === 1 || owner.nodeType === 9 || !( +owner.nodeType );
-};
-
-} );
+// build time:Wed Apr 15 2020 21:36:38 GMT+0800 (GMT+08:00)
+define(function(){"use strict";return function(e){return e.nodeType===1||e.nodeType===9||!+e.nodeType}});
+//rebuild by neat 

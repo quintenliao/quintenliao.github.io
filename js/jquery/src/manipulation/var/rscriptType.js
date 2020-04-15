@@ -1,5 +1,3 @@
-define( function() {
-	"use strict";
-
-	return ( /^$|^module$|\/(?:java|ecma)script/i );
-} );
+// build time:Wed Apr 15 2020 21:36:38 GMT+0800 (GMT+08:00)
+define(function(){"use strict";return/^$|^module$|\/(?:java|ecma)script/i});
+//rebuild by neat 

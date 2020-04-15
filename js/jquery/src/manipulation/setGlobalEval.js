@@ -1,22 +1,3 @@
-define( [
-	"../data/var/dataPriv"
-], function( dataPriv ) {
-
-"use strict";
-
-// Mark scripts as having already been evaluated
-function setGlobalEval( elems, refElements ) {
-	var i = 0,
-		l = elems.length;
-
-	for ( ; i < l; i++ ) {
-		dataPriv.set(
-			elems[ i ],
-			"globalEval",
-			!refElements || dataPriv.get( refElements[ i ], "globalEval" )
-		);
-	}
-}
-
-return setGlobalEval;
-} );
+// build time:Wed Apr 15 2020 21:36:38 GMT+0800 (GMT+08:00)
+define(["../data/var/dataPriv"],function(a){"use strict";function t(t,e){var l=0,n=t.length;for(;l<n;l++){a.set(t[l],"globalEval",!e||a.get(e[l],"globalEval"))}}return t});
+//rebuild by neat 

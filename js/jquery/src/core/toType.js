@@ -1,20 +1,3 @@
-define( [
-	"../var/class2type",
-	"../var/toString"
-], function( class2type, toString ) {
-
-"use strict";
-
-function toType( obj ) {
-	if ( obj == null ) {
-		return obj + "";
-	}
-
-	// Support: Android <=2.3 only (functionish RegExp)
-	return typeof obj === "object" || typeof obj === "function" ?
-		class2type[ toString.call( obj ) ] || "object" :
-		typeof obj;
-}
-
-return toType;
-} );
+// build time:Wed Apr 15 2020 21:36:38 GMT+0800 (GMT+08:00)
+define(["../var/class2type","../var/toString"],function(t,e){"use strict";function n(n){if(n==null){return n+""}return typeof n==="object"||typeof n==="function"?t[e.call(n)]||"object":typeof n}return n});
+//rebuild by neat 
